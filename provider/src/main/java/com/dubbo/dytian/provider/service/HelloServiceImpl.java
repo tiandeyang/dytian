@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  */
 // 这里注意 此类@service是dubbo的
 
-@Service(interfaceClass = IHelloService.class)
+@Service(interfaceClass = IHelloService.class,version = "1.0")
 @Component
 public class HelloServiceImpl implements IHelloService {
 
