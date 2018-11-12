@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class HelloService {
 
 
-    @Reference
+    @Reference(version = "1.0")
     IHelloService iHelloService;
 
 

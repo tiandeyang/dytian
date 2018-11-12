@@ -2,8 +2,10 @@ package com.dubbo.dytian.consumer;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
-import com.dubbo.dytian.api.service.IHelloService;
+import com.dubbo.dytian.api.entity.WxUser;
+import com.dubbo.dytian.api.service.WxUserService;
 import com.dubbo.dytian.consumer.service.HelloService;
+import com.dubbo.dytian.consumer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,8 +22,12 @@ public class ConsumerApplication {
         SpringApplication.run(ConsumerApplication.class, args);
     }
 
+
     @Autowired
     HelloService helloService;
+
+    @Autowired
+    UserService userService;
 
 
     @GetMapping("/hello")
@@ -29,5 +35,14 @@ public class ConsumerApplication {
         System.out.println("调用提供者服务，参数name,888 "+name);
         return helloService.hello(name);
     }
+
+
+    @GetMapping("/wxuser")
+    public WxUser getUser(@RequestParam("openid") String openid) {
+        System.out.println("openid==="+openid);
+        return userService.getUser(openid);
+    }
+
+
 
 }
