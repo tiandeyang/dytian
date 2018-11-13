@@ -25,8 +25,9 @@ public class WxUserServiceImp implements WxUserService {
 
         WxUser wxUser = new WxUser();
         wxUser.setOpenid(openid);
-        wxUser.setXv_id(wx_user.getXv_id());
-
+        if (null != wx_user){
+            wxUser.setXv_id(wx_user.getXv_id());
+        }
         return wxUser;
     }
 
