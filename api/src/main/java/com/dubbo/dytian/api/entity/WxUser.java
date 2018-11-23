@@ -24,6 +24,7 @@ public class WxUser implements Serializable {
     }
 
     public void setXv_id(String xv_id) {
+        System.out.println("the xv_id ="+xv_id);
         this.xv_id = xv_id;
     }
 }
