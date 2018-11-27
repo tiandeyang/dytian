@@ -3,7 +3,6 @@ package com.dubbo.dytian.consumer;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 import com.dubbo.dytian.api.entity.WxUser;
-import com.dubbo.dytian.api.service.WxUserService;
 import com.dubbo.dytian.consumer.service.HelloService;
 import com.dubbo.dytian.consumer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
 
 @SpringBootApplication
 @EnableDubboConfiguration
