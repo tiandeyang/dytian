@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dubbo.dytian.provider.mapper.Wx_userMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dubbo.dytian.provider.entity.Wx_user">
+        <id column="user_id" property="user_id" />
+        <result column="store_id" property="store_id" />
+        <result column="store_name" property="store_name" />
+        <result column="user_open_id" property="user_open_id" />
+        <result column="user_name" property="user_name" />
+        <result column="user_phone" property="user_phone" />
+        <result column="user_wallet" property="user_wallet" />
+        <result column="user_score" property="user_score" />
+        <result column="user_vip" property="user_vip" />
+        <result column="user_nick" property="user_nick" />
+        <result column="user_country" property="user_country" />
+        <result column="user_province" property="user_province" />
+        <result column="user_city" property="user_city" />
+        <result column="user_sex" property="user_sex" />
+        <result column="pay_code" property="pay_code" />
+        <result column="create_time" property="create_time" />
+        <result column="xv_id" property="xv_id" />
+        <result column="pay_barcode" property="pay_barcode" />
+        <result column="user_idcard" property="user_idcard" />
+        <result column="left_money" property="left_money" />
+        <result column="user_new_wallet" property="user_new_wallet" />
+        <result column="reset_new_wallet" property="reset_new_wallet" />
+        <result column="hb_flag" property="hb_flag" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_id, store_id, store_name, user_open_id, user_name, user_phone, user_wallet, user_score, user_vip, user_nick, user_country, user_province, user_city, user_sex, pay_code, create_time, xv_id, pay_barcode, user_idcard, left_money, user_new_wallet, reset_new_wallet, hb_flag
+    </sql>
+
+</mapper>
